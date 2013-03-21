@@ -61,7 +61,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # export PS1="$txtwht\W$txtylw\$(__git_ps1 '(%s)')$txtrst \$ "
 export PS1="$txtwht\W$txtylw\$(__git_ps1)$txtrst \$ "
 
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH:~/bin
 
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 
