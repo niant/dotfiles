@@ -1,0 +1,2 @@
+# Alias for creating simple Python web server in current directory
+alias startserver='python -m SimpleHTTPServer'
