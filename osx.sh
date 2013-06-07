@@ -20,7 +20,7 @@
 # Show scrollbars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
-# Expand save panel by default
+# Expand save panel by defaults
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # Save to disk (not to iCloud) by default
@@ -33,10 +33,13 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 15
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Initial key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Remove mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 # Set locale
 defaults write NSGlobalDomain AppleLocale -string "fi_FI"
