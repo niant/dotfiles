@@ -10,6 +10,7 @@ brew install git
 brew install mongodb
 brew install wget
 brew install irssi
+brew install ack
 
 # PHP setup
 # brew tap homebrew/dupes
