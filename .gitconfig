@@ -1,3 +1,8 @@
+[user]
+    name = niant
+    email =
+[alias]
+    logtree = log --pretty=format:'%h %s [%an]' --graph
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
     ui = auto
