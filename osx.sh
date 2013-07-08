@@ -114,6 +114,10 @@ defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Previou
 
 # Miscellanious
 
+## Remove duplicates from "Open with menu"
+# /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+# killall Finder
+
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
