@@ -12,6 +12,8 @@ brew install wget
 brew install irssi
 brew install ack
 
+brew install phantomjs
+
 # PHP setup
 # brew tap homebrew/dupes
 # brew tap josegonzalez/homebrew-php
