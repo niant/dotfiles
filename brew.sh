@@ -12,6 +12,9 @@ brew install wget
 brew install irssi
 brew install ack
 
+brew install phantomjs
+brew install casperjs --devel # casperjs installation
+
 # PHP setup
 # brew tap homebrew/dupes
 # brew tap josegonzalez/homebrew-php
