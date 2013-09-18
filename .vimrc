@@ -1,2 +1,3 @@
 syntax on
-autocmd Filetype gitcommit spell textwidth=72
+au FileType gitcommit set tw=72
+filetype indent plugin on
