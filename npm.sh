@@ -4,6 +4,7 @@
 npm install -g bower
 npm install -g karma
 npm install -g grunt-cli
+npm install -g mocha # testing framework
 
 npm install -g yo
 npm install -g generator-webapp
