@@ -65,5 +65,6 @@ export PATH=/usr/local/bin:/usr/local/opt/ruby/bin:$PATH:~/bin
 
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 
+[[ -s ~/.dotfiles/z/z.sh ]] && . ~/.dotfiles/z/z.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
