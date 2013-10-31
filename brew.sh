@@ -6,6 +6,15 @@
 # Make sure we’re using the latest Homebrew
 brew update
 
+# normal gui installations
+brew tap phinze/homebrew-cask
+brew install brew-cask
+brew cask install google-chrome
+brew cask install google-chrome-canary
+brew cask install dropbox
+brew cask install sublime-text
+brew cask install vlc
+
 brew install git
 brew install mongodb
 brew install wget
