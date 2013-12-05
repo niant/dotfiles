@@ -14,3 +14,4 @@ npm install -g generator-karma #@0.3 #  Peer generator-angular@0.3.0 wants gener
 npm install -g http-server
 npm install -g npm-check-updates
 npm install -g node-inspector
+npm install -g nodemon
