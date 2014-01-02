@@ -91,6 +91,9 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
+# Disable .DS_Store creation on network drives
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
 # Dock
 
 # Set the icon size of Dock items to 36 pixels
