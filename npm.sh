@@ -13,3 +13,5 @@ npm install -g karma-cli
 
 #Utils
 npm install -g http-server
+npm install -g grasp
+npm install -g pageres
