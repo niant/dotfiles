@@ -3,6 +3,11 @@
     email =
 [alias]
     logtree = log --pretty=format:'%h %s [%an]' --graph
+
+    # git change-commits GIT_COMMITTER_NAME "old name" "new name"
+    change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ $`echo $VAR` = \\\"$OLD\\\" ]]; then export $VAR=\\\"$NEW\\\"; fi\" $@; }; f"
+    # from https://help.github.com/articles/remove-sensitive-data
+    #
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
     ui = auto
