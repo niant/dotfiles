@@ -6,6 +6,16 @@
 # Make sure we’re using the latest Homebrew
 brew update
 
+brew install git
+brew install mongodb
+brew install wget
+brew install irssi
+brew install ack
+brew install youtube-dl
+
+brew install phantomjs
+brew install casperjs --devel # casperjs installation
+
 # normal gui installations
 brew tap phinze/homebrew-cask
 brew install brew-cask
@@ -14,15 +24,6 @@ brew cask install google-chrome-canary
 brew cask install dropbox
 brew cask install sublime-text
 brew cask install vlc
-
-brew install git
-brew install mongodb
-brew install wget
-brew install irssi
-brew install ack
-
-brew install phantomjs
-brew install casperjs --devel # casperjs installation
 
 # PHP setup
 # brew tap homebrew/dupes
