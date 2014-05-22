@@ -12,6 +12,8 @@ brew install wget
 brew install irssi
 brew install ack
 brew install youtube-dl
+brew install tmux
+brew install reattach-to-user-namespace # http://savanne.be/804-running-karma-and-chrome-under-tmux-on-osx/
 
 brew install phantomjs
 brew install casperjs --devel # casperjs installation
