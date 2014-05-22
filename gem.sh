@@ -3,3 +3,4 @@
 # http://zmoazeni.github.io/csscss/
 gem install csscss
 gem install compass
+gem install tmuxinator
