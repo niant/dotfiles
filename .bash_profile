@@ -55,6 +55,8 @@ txtrst='\[\e[0m\]'    # Text Reset
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+export EDITOR=vim
+
 #PS1='\W$(__git_ps1) $ '
 #PS1="\W$txtylw\$(__git_ps1) $txtrst\$ "
 # export PS1="\W$txtylw\$(__git_ps1 '(%s)')$txtrst: "
