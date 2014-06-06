@@ -20,8 +20,7 @@ brew install phantomjs
 brew install casperjs --devel # casperjs installation
 
 # normal gui installations
-brew tap phinze/homebrew-cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install dropbox
