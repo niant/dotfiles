@@ -8,6 +8,13 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'scrooloose/syntastic'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -27,6 +34,8 @@ set autoread
 
 " Replace tabs with spaces "
 set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 " If I am in an indented block of code, keep the indentation level when I "
 " press enter "
@@ -40,6 +49,8 @@ set hlsearch
 
 " Highlight column 81 to help keep lines of code 80 characters or less "
 set colorcolumn=81
+
+set backspace=indent,eol,start " backspace over everything in insert mode
 
 " Allows normal mode to autocomplete paths using tab like bash does "
 set wildmenu
@@ -58,5 +69,9 @@ set t_Co=256
 
 " Remove trailing spaces when saving a file "
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Turn on auto-complete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 filetype indent plugin on
