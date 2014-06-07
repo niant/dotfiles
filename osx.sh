@@ -45,14 +45,13 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Keyboard settings
+#
 # Set a really fast key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Initial key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
-
-# Remove mouse acceleration
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 # Set locale
 defaults write NSGlobalDomain AppleLocale -string "fi_FI"
@@ -74,6 +73,9 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Automatically illuminate built-in MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
+
+# Remove mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 # Language and text formats
 
