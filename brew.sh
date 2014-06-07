@@ -29,7 +29,8 @@ brew cask install sublime-text
 brew cask install vlc
 brew cask install slate
 brew cask install atom
-brew cask install pckeyboardhack # to change caps lock behavior (slate)
+brew cask install pckeyboardhack # to change caps lock behaviour (slate)
+brew cask install keyremap4macbook # to change caps lock behaviour (slate)
 
 # PHP setup
 # brew tap homebrew/dupes
