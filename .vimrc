@@ -16,6 +16,8 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 
+" Install NERD tree plugin/bundle (https://github.com/scrooloose/nerdtree) "
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
