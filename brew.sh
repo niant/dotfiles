@@ -18,7 +18,7 @@ brew install zsh
 brew install vim
 
 brew install phantomjs
-brew install casperjs --devel # casperjs installation
+# brew install casperjs --devel # casperjs installation
 
 # normal gui installations
 brew install caskroom/cask/brew-cask
@@ -27,6 +27,9 @@ brew cask install google-chrome-canary
 brew cask install dropbox
 brew cask install sublime-text
 brew cask install vlc
+brew cask install slate
+brew cask install atom
+brew cask install pckeyboardhack # to change caps lock behavior (slate)
 
 # PHP setup
 # brew tap homebrew/dupes
