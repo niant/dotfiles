@@ -46,12 +46,12 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Keyboard settings
-#
+
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain KeyRepeat -int 18
 
 # Initial key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain InitialKeyRepeat -int 30
 
 # Set locale
 defaults write NSGlobalDomain AppleLocale -string "fi_FI"
