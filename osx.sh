@@ -143,5 +143,8 @@ defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Previou
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
 # done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
