@@ -15,7 +15,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
-
+Plugin 'scrooloose/nerdtree.git'
 " Install NERD tree plugin/bundle (https://github.com/scrooloose/nerdtree) "
 
 " All of your Plugins must be added before the following line
