@@ -9,7 +9,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #vim +BundleInstall
 
 # Install tern_js for VIM bundle
-# ~/.vim/bundle/tern_for_vim/npm install
+# cd ~/.vim/bundle/tern_for_vim/ && npm install
 
 # Install YouCompleteMe
-# sh ~/.vim/bundle/YouCompleteMe/install.sh
+# cd ~/.vim/bundle/YouCompleteMe/ && sh ./install.sh

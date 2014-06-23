@@ -31,6 +31,8 @@ brew cask install slate
 brew cask install atom
 brew cask install pckeyboardhack # to change caps lock behaviour (slate)
 brew cask install keyremap4macbook # to change caps lock behaviour (slate)
+brew cask install amethyst # window manager
+brew cask install phoenix
 
 # PHP setup
 # brew tap homebrew/dupes
