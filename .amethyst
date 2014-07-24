@@ -14,5 +14,11 @@
         "command",
         "option",
         "control"
+    ],
+    "floating": [
+        "com.apple.systempreferences",
+        "com.apple.iChat",
+        "com.spotify.client",
+        "com.apple.SystemProfiler"
     ]
 }
