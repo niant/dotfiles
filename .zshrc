@@ -74,4 +74,4 @@ export EDITOR='vim'
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/opt/ruby/bin:$PATH
