@@ -27,6 +27,7 @@ brew cask install google-chrome-canary
 brew cask install dropbox
 brew cask install sublime-text
 brew cask install vlc
+brew cask install mplayerx
 brew cask install slate
 brew cask install atom
 brew cask install pckeyboardhack # to change caps lock behaviour, nowadays Seil
