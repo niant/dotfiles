@@ -30,8 +30,8 @@ brew cask install vlc
 brew cask install mplayerx
 brew cask install slate
 brew cask install atom
-brew cask install pckeyboardhack # to change caps lock behaviour, nowadays Seil
-brew cask install keyremap4macbook # to change caps lock behaviour, nowadays karabiner
+brew cask install seil
+brew cask install karabiner
 brew cask install amethyst # window manager
 brew cask install phoenix
 
