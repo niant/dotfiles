@@ -16,6 +16,23 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 Plugin 'scrooloose/nerdtree.git'
+
+Bundle "tomtom/tlib_vim"
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle 'garbas/vim-snipmate'
+Bundle "honza/vim-snippets"
+
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'tpope/vim-surround'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'SearchComplete'
+Plugin 'godlygeek/tabular'
+Plugin 'Shougo/neocomplcache'
+Plugin 'leshill/vim-json'
+Plugin 'digitaltoad/vim-jade'
 " Install NERD tree plugin/bundle (https://github.com/scrooloose/nerdtree) "
 
 " All of your Plugins must be added before the following line
