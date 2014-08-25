@@ -33,7 +33,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neocomplcache'
 Plugin 'leshill/vim-json'
 Plugin 'digitaltoad/vim-jade'
-" Install NERD tree plugin/bundle (https://github.com/scrooloose/nerdtree) "
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,6 +90,8 @@ set t_Co=256
 
 " Remove trailing spaces when saving a file "
 autocmd BufWritePre * :%s/\s\+$//e
+
+colorscheme molokai
 
 " Turn on auto-complete
 filetype plugin on
