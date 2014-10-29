@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export TERM='xterm-256color'
+export TERM='screen-256color'
 export EDITOR='vim'
 
 # Compilation flags
