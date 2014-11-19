@@ -34,6 +34,7 @@ brew cask install seil
 brew cask install karabiner
 brew cask install amethyst # window manager
 brew cask install phoenix
+brew cask install virtualbox
 
 # PHP setup
 # brew tap homebrew/dupes
