@@ -7,7 +7,7 @@
 brew update
 
 brew install git
-brew install mongodb
+# brew install mongodb
 brew install wget
 brew install irssi
 brew install ack
@@ -16,8 +16,7 @@ brew install tmux
 brew install reattach-to-user-namespace # http://savanne.be/804-running-karma-and-chrome-under-tmux-on-osx/
 brew install zsh
 brew install vim
-
-brew install phantomjs
+# brew install phantomjs
 # brew install casperjs --devel # casperjs installation
 
 # normal gui installations
@@ -33,7 +32,10 @@ brew cask install atom
 brew cask install seil
 brew cask install karabiner
 brew cask install amethyst # window manager
-brew cask install phoenix
+# brew cask install phoenix
+
+# Clojure setup (first install Java JDK)
+brew install leiningen
 
 # PHP setup
 # brew tap homebrew/dupes
