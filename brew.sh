@@ -33,6 +33,7 @@ brew cask install atom
 brew cask install seil
 brew cask install karabiner
 brew cask install amethyst # window manager
+brew cask install smcfancontrol
 # brew cask install phoenix
 
 # Clojure setup (first install Java JDK)
