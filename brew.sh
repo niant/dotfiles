@@ -7,6 +7,7 @@
 brew update
 
 brew install git
+brew install git-extras
 # brew install mongodb
 brew install wget
 brew install irssi
