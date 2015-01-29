@@ -20,6 +20,7 @@
         "com.apple.iChat",
         "com.spotify.client",
         "com.apple.SystemProfiler",
-        "com.valvesoftware.steam"
+        "com.valvesoftware.steam",
+        "net.battle.app"
     ]
 }
