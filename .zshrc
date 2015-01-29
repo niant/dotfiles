@@ -80,3 +80,5 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f ~/.aliases ] && source ~/.aliases
