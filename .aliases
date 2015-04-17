@@ -1,2 +1,5 @@
-# Alias for creating simple Python web server in current directory
-alias startserver='python -m SimpleHTTPServer'
+alias findmovies='find . -type f -name *.mkv -o -name *.mov -o -name *.mp4 -o -name *.mpg'
+
+alias disablehostsblock='cp /etc/hosts_orig /etc/hosts'
+
+alias enablehostsblock='cp /etc/hosts_default /etc/hosts'

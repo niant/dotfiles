@@ -19,6 +19,8 @@
         "com.apple.systempreferences",
         "com.apple.iChat",
         "com.spotify.client",
-        "com.apple.SystemProfiler"
+        "com.apple.SystemProfiler",
+        "com.valvesoftware.steam",
+        "net.battle.app"
     ]
 }

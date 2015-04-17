@@ -34,8 +34,10 @@ Plugin 'Shougo/neocomplcache'
 Plugin 'leshill/vim-json'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-signify'
 Plugin 'bling/vim-airline'
 Bundle 'edkolev/tmuxline.vim'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

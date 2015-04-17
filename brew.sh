@@ -7,7 +7,8 @@
 brew update
 
 brew install git
-brew install mongodb
+brew install git-extras
+# brew install mongodb
 brew install wget
 brew install irssi
 brew install ack
@@ -19,6 +20,8 @@ brew install vim
 brew install blueutil
 
 brew install phantomjs
+brew install zsh-syntax-highlighting
+# brew install phantomjs
 # brew install casperjs --devel # casperjs installation
 
 # normal gui installations
@@ -34,8 +37,12 @@ brew cask install atom
 brew cask install seil
 brew cask install karabiner
 brew cask install amethyst # window manager
-brew cask install phoenix
 brew cask install virtualbox
+brew cask install smcfancontrol
+# brew cask install phoenix
+
+# Clojure setup (first install Java JDK)
+brew install leiningen
 
 # PHP setup
 # brew tap homebrew/dupes
