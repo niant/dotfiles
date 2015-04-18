@@ -18,6 +18,7 @@ brew install reattach-to-user-namespace # http://savanne.be/804-running-karma-an
 brew install zsh
 brew install vim
 brew install zsh-syntax-highlighting
+brewi install rlwrap # (auto-complete for terminal apps that don't support it)
 # brew install phantomjs
 # brew install casperjs --devel # casperjs installation
 
