@@ -17,8 +17,11 @@ brew install tmux
 brew install reattach-to-user-namespace # http://savanne.be/804-running-karma-and-chrome-under-tmux-on-osx/
 brew install zsh
 brew install vim
+brew install blueutil
+
+brew install phantomjs
 brew install zsh-syntax-highlighting
-brewi install rlwrap # (auto-complete for terminal apps that don't support it)
+brew install rlwrap # (auto-complete for terminal apps that don't support it)
 # brew install phantomjs
 # brew install casperjs --devel # casperjs installation
 
@@ -35,6 +38,7 @@ brew cask install atom
 brew cask install seil
 brew cask install karabiner
 brew cask install amethyst # window manager
+brew cask install virtualbox
 brew cask install smcfancontrol
 # brew cask install phoenix
 
