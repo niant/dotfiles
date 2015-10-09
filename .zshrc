@@ -66,7 +66,8 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export TERM='screen-256color'
+# export TERM='screen-256color'
+export TERM='xterm-256color'
 export EDITOR='vim'
 
 # Compilation flags
@@ -82,3 +83,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
 [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.aliases ] && source ~/.aliases
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-solarized.dark.sh"
+
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
