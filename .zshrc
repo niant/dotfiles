@@ -89,3 +89,5 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
 BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-solarized.dark.sh"
 
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+[[ -s "$HOME/.dotfiles/private-keys.sh" ]] && source "$HOME/.dotfiles/private-keys.sh"
