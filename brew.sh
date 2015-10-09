@@ -21,6 +21,7 @@ brew install blueutil
 
 brew install phantomjs
 brew install zsh-syntax-highlighting
+brew install rlwrap # (auto-complete for terminal apps that don't support it)
 # brew install phantomjs
 # brew install casperjs --devel # casperjs installation
 

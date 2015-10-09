@@ -1,4 +1,4 @@
-alias findmovies='find . -type f -name *.mkv -o -name *.mov -o -name *.mp4 -o -name *.mpg'
+alias findmovies='find . -type f -name "*.mkv" -o -name "*.mov" -o -name "*.mp4" -o -name "*.mpg"'
 
 alias disablehostsblock='cp /etc/hosts_orig /etc/hosts'
 
