@@ -13,7 +13,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
-Bundle 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 Plugin 'scrooloose/nerdtree.git'
 
@@ -38,6 +38,9 @@ Plugin 'mhinz/vim-signify'
 Plugin 'bling/vim-airline'
 Bundle 'edkolev/tmuxline.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'chriskempson/base16-vim'
+Plugin 'jdkanani/vim-material-theme'
+Plugin 'othree/yajs.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,6 +62,9 @@ set autoread
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+" Faster terminal
+set ttyfast
 
 " If I am in an indented block of code, keep the indentation level when I "
 " press enter "
@@ -90,13 +96,42 @@ nmap <S-tab> <<
 " Allow the use of 256 colors in the terminal "
 set t_Co=256
 
+" Show matching brackets/parenthesis
+set showmatch
+
 " Remove trailing spaces when saving a file "
 autocmd BufWritePre * :%s/\s\+$//e
 
-colorscheme molokai
+" let g:solarized_termcolors=256
+let base16colorspace=256
+set background=dark
+colorscheme base16-solarized
 
 " Turn on auto-complete
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+" Enable vim airline on single files
+set laststatus=2
+
 filetype indent plugin on
+
+" NERD tree tabs
+map  <C-l> :tabn<CR>
+map  <C-h> :tabp<CR>
+map  <C-n> :tabnew<CR>
+
+" leader key
+let mapleader = ','
+
+" Put backup and swap files away from working directory
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
+" ctrlp: ignore bower and node files
+let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules)$'
+
+" Wrapped lines goes down/up to next row, rather than next line in file.
+noremap j gj
+noremap k gk
