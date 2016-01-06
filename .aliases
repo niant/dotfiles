@@ -1,5 +1,5 @@
 alias findmovies='find . -type f -name "*.mkv" -o -name "*.mov" -o -name "*.mp4" -o -name "*.mpg"'
 
-alias disablehostsblock='cp /etc/hosts_orig /etc/hosts'
+alias disablehostsblock='sudo cp /etc/hosts_orig /etc/hosts'
 
-alias enablehostsblock='cp /etc/hosts_default /etc/hosts'
+alias enablehostsblock='sudo cp /etc/hosts_default /etc/hosts'
