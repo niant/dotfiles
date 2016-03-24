@@ -45,6 +45,7 @@ DISABLE_AUTO_TITLE="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -89,3 +90,5 @@ export EDITOR='vim'
 BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-solarized.dark.sh"
 
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+[[ -s "$HOME/.dotfiles/private-keys.sh" ]] && source "$HOME/.dotfiles/private-keys.sh"

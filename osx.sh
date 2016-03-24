@@ -77,6 +77,9 @@ defaults write com.apple.BezelServices kDim -bool true
 # Remove mouse acceleration
 defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
+# Remove El Capitan cursor shake-to-zoom
+defaults write .GlobalPreferences CGDisableCursorLocationMagnification -bool YES
+
 # Language and text formats
 
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
