@@ -102,6 +102,9 @@ set showmatch
 " Remove trailing spaces when saving a file "
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Make editing crontabs possible (disable backup and make in-place editing)
+autocmd FileType crontab setlocal nowritebackup
+
 " let g:solarized_termcolors=256
 let base16colorspace=256
 set background=dark
