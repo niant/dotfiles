@@ -1,0 +1,33 @@
+# Git installation (xcode)
+# clone dotfiles (GitHub)
+git clone —recursive https://github.com/niant/dotfiles.git ~/.dotfiles
+
+# Brew
+brew install git git-extras tmux zsh vim
+brew tap caskroom/cask
+brew cask install iterm2 google-chrome caskroom/versions/google-chrome-canary sublime-text amethyst spotify
+
+# run osx.sh
+# Adjust mouse, scrolling, keyboard, dock
+# General > use dark menu bar & dock
+
+# make zsh default command for term profile
+/usr/local/bin/zsh
+tmux (command)
+# download oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# config vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+cd ~/.vim/ && mkdir backup swap undo
+
+# install fonts
+https://github.com/powerline/fonts
+
+# Keyboard settings
+# Full keyboard access all controls
+# Key repeat
+# Auto-correct
+# Move focus into next window cmd+<
+
