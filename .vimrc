@@ -108,7 +108,7 @@ autocmd FileType crontab setlocal nowritebackup
 " let g:solarized_termcolors=256
 let base16colorspace=256
 set background=dark
-colorscheme base16-solarized
+" colorscheme base16-solarized
 
 " Turn on auto-complete
 filetype plugin on
