@@ -1,10 +1,10 @@
 {
     "layouts": [
+        "floating",
         "tall",
         "wide",
         "fullscreen",
-        "column",
-        "floating"
+        "column"
     ],
     "mod1": [
         "option",
