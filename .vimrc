@@ -39,9 +39,10 @@ Bundle 'edkolev/tmuxline.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'jdkanani/vim-material-theme'
-Plugin 'othree/yajs.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'trevordmiller/nova-vim'
+Plugin 'drewtempelmeyer/palenight.vim'
+Plugin 'joshdick/onedark.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -109,9 +110,9 @@ autocmd FileType crontab setlocal nowritebackup
 
 " let g:solarized_termcolors=256
 " let base16colorspace=256
-" set background=dark
+set background=dark
 " colorscheme base16-solarized
-" colorscheme nova
+colorscheme palenight
 
 " Turn on auto-complete
 filetype plugin on
