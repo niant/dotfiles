@@ -32,7 +32,6 @@ Plugin 'SearchComplete'
 Plugin 'godlygeek/tabular'
 Plugin 'Shougo/neocomplcache'
 Plugin 'leshill/vim-json'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mhinz/vim-signify'
 Plugin 'bling/vim-airline'
@@ -41,6 +40,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'jdkanani/vim-material-theme'
 Plugin 'othree/yajs.vim'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'trevordmiller/nova-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,6 +73,7 @@ set autoindent
 
 " Show line numbers "
 set number
+set rnu
 
 " Highlight all occurrences of a search "
 set hlsearch
@@ -94,7 +96,7 @@ imap <S-Tab> <Esc><<i
 nmap <S-tab> <<
 
 " Allow the use of 256 colors in the terminal "
-set t_Co=256
+" set t_Co=256
 
 " Show matching brackets/parenthesis
 set showmatch
@@ -106,9 +108,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType crontab setlocal nowritebackup
 
 " let g:solarized_termcolors=256
-let base16colorspace=256
-set background=dark
+" let base16colorspace=256
+" set background=dark
 " colorscheme base16-solarized
+" colorscheme nova
 
 " Turn on auto-complete
 filetype plugin on
@@ -138,3 +141,13 @@ let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules)$'
 " Wrapped lines goes down/up to next row, rather than next line in file.
 noremap j gj
 noremap k gk
+
+" let macvim_skip_colorscheme=1
+
+" https://github.com/tmux/tmux/issues/1246
+" Enable true color
+ if exists('+termguicolors')
+   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+   set termguicolors
+ endif

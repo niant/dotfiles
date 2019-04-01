@@ -5,7 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="miloshadzic"
+ZSH_THEME="agnoster"
+DEFAULT_USER="anttini"
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
 # Example aliases
@@ -45,12 +46,11 @@ DISABLE_AUTO_TITLE="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery brew brew-cask cp extract gem node npm nvm rvm tmux tmuxinator z zsh_reload sublime mercurial)
+plugins=(git battery brew brew-cask cp extract  node npm nvm tmux zsh_reload sublime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 # export TERM='screen-256color'
-export TERM='xterm-256color'
+# export TERM='xterm-256color'
 export EDITOR='vim'
 
 # Compilation flags
@@ -85,10 +85,10 @@ export EDITOR='vim'
 
 [ -f ~/.aliases ] && source ~/.aliases
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-solarized.dark.sh"
+#BASE16_SHELL="$HOME/.dotfiles/base16-shell/base16-solarized.dark.sh"
 
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+#[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 [[ -s "$HOME/.dotfiles/private-keys.sh" ]] && source "$HOME/.dotfiles/private-keys.sh"
