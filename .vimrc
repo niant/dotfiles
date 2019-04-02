@@ -8,8 +8,6 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'scrooloose/syntastic'
 Bundle 'Raimondi/delimitMate'
@@ -23,7 +21,6 @@ Bundle 'garbas/vim-snipmate'
 Bundle "honza/vim-snippets"
 
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
@@ -43,6 +40,8 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'trevordmiller/nova-vim'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'joshdick/onedark.vim'
+Plugin 'brooth/far.vim'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -126,7 +125,9 @@ filetype indent plugin on
 " NERD tree tabs
 map  <C-l> :tabn<CR>
 map  <C-h> :tabp<CR>
-map  <C-n> :tabnew<CR>
+"map  <C-n> :tabnew<CR>
+
+nnoremap <esc><esc> :noh<CR>
 
 " leader key
 let mapleader = ','
@@ -147,8 +148,12 @@ noremap k gk
 
 " https://github.com/tmux/tmux/issues/1246
 " Enable true color
- if exists('+termguicolors')
-   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-   set termguicolors
- endif
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
+" Fix performance issue on far.vim
+set lazyredraw
+set regexpengine=1
