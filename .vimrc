@@ -42,6 +42,10 @@ Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'prettier/vim-prettier'
+Plugin 'janko-m/vim-test'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -143,6 +147,19 @@ let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules)$'
 " Wrapped lines goes down/up to next row, rather than next line in file.
 noremap j gj
 noremap k gk
+
+" Move blocks
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Buffer keybinds for fzf
+nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
 
 " let macvim_skip_colorscheme=1
 
