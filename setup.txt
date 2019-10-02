@@ -3,9 +3,9 @@
 git clone —recursive https://github.com/niant/dotfiles.git ~/.dotfiles
 
 # Brew
-brew install git git-extras tmux zsh vim
+brew install git git-extras tmux zsh vim nvm
 brew tap caskroom/cask
-brew cask install iterm2 google-chrome caskroom/versions/google-chrome-canary sublime-text amethyst spotify
+brew cask install iterm2 google-chrome caskroom/versions/google-chrome-canary sublime-text amethyst spotify homebrew/cask-fonts/font-meslo-for-powerline
 
 # run osx.sh
 # Adjust mouse, scrolling, keyboard, dock
@@ -22,8 +22,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 cd ~/.vim/ && mkdir backup swap undo
 
-# install fonts
-https://github.com/powerline/fonts
+# install fonts (manually if brew cask does not work)
+# https://github.com/powerline/fonts
 
 # Keyboard settings
 # Full keyboard access all controls
@@ -31,3 +31,5 @@ https://github.com/powerline/fonts
 # Auto-correct
 # Move focus into next window cmd+<
 
+# Install nvm node to be recognized by OS
+# Add path to node bin directory in /etc/paths.d (create file eg. node-path)
