@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
 DEFAULT_USER="anttini"
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -50,7 +50,7 @@ DISABLE_AUTO_TITLE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery brew brew-cask cp extract  node npm nvm tmux zsh_reload sublime)
+plugins=(git battery brew cp extract node npm nvm tmux zsh_reload sublime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,7 +60,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -92,3 +92,7 @@ export EDITOR='vim'
 #[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 [[ -s "$HOME/.dotfiles/private-keys.sh" ]] && source "$HOME/.dotfiles/private-keys.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
