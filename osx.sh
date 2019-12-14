@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://mths.be/macos
+
 # Usage: ./osx.sh
 
 # Ask for the administrator password upfront
@@ -24,11 +26,11 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
         "/System/Library/CoreServices/Menu Extras/User.menu"
 done
 
-defaults write com.apple.systemuiserver menuExtras -array \
-    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-    "/System/Library/CoreServices/Menu Extras/Clock.menu"
+# defaults write com.apple.systemuiserver menuExtras -array \
+#     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+#     "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+#     "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+#     "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Show scrollbars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
@@ -45,28 +47,50 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
+
+# Disable automatic capitalization as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable automatic period substitution as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Disable smart quotes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
 # Keyboard settings
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 18
+defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Initial key repeat
-defaults write NSGlobalDomain InitialKeyRepeat -int 30
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
-# Set locale
-defaults write NSGlobalDomain AppleLocale -string "fi_FI"
-
-# Set the timezone; see `systemsetup -listtimezones` for other values
-systemsetup -settimezone "Europe/Helsinki" > /dev/null
+# Enable full keyboard access for all controls
+# (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 
+# Set locale
+defaults write NSGlobalDomain AppleLocale -string "en_FI"
+
+# Set the timezone; see `systemsetup -listtimezones` for other values
+systemsetup -settimezone "Europe/Helsinki" > /dev/null
+
 # Mouse settings
 
 # Disable tap to click
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 0
+# defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 0
 
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
@@ -81,14 +105,13 @@ defaults write .GlobalPreferences com.apple.mouse.scaling -1
 defaults write .GlobalPreferences CGDisableCursorLocationMagnification -bool YES
 
 # Language and text formats
-
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Finder
 
 # Finder: show hidden files by default
-# defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -127,17 +150,40 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-time-modifier -float 0.12;killall Dock
 # Restore: defaults delete com.apple.dock autohide-time-modifier;killall Dock
 
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+# Wipe all (default) app icons from the Dock
+# This is only really useful when setting up a new Mac, or if you don’t use
+# the Dock to launch apps.
+# defaults write com.apple.dock persistent-apps -array
 
 # Terminal
 
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+# App store
+
+# Download newly available updates in background
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+
+# Install System data files & security updates
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
+
+# Turn on app auto-update
+defaults write com.apple.commerce AutoUpdate -bool true
+
 # Select theme
-defaults write com.apple.terminal "Default Window Settings" -string "Pro"
-defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
+# defaults write com.apple.terminal "Default Window Settings" -string "Pro"
+# defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
 
 # Add keyboard shortcuts
-defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Merge All Windows" "@~m"
-defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Next Tab" "@~\\U2192"
-defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Previous Tab" "@~\\U2190"
+# defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Merge All Windows" "@~m"
+# defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Next Tab" "@~\\U2192"
+# defaults write com.apple.terminal NSUserKeyEquivalents -dict-add "Select Previous Tab" "@~\\U2190"
 
 # Miscellanious
 
