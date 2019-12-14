@@ -18,5 +18,3 @@
     ui = auto
 [push]
     default = matching
-[core]
-	editor = /usr/local/bin/vim
