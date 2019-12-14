@@ -26,6 +26,9 @@ bindkey -v
 # 10ms for key sequences
 KEYTIMEOUT=1
 
+# Enable colors for ls for example
+export CLICOLOR=1
+
 export EDITOR='vim'
 
 [ -f ~/.dotfiles/.aliases ] && source ~/.dotfiles/.aliases
