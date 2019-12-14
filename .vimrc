@@ -1,55 +1,42 @@
-" Required by Vundle (iMproved)
 set nocompatible
-filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'scrooloose/syntastic'
-Bundle 'Raimondi/delimitMate'
-" Plugin 'Valloric/YouCompleteMe'
-Bundle 'marijnh/tern_for_vim'
-Plugin 'scrooloose/nerdtree.git'
+call plug#begin('~/.vim/plugged')
 
-Bundle "tomtom/tlib_vim"
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle 'garbas/vim-snipmate'
-Bundle "honza/vim-snippets"
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'leshill/vim-json'
+" Plug 'bronson/vim-trailing-whitespace'
+" Plug 'scrooloose/nerdtree.git'
+" Plug 'tpope/vim-surround'
+" Plug 'git://git.wincent.com/command-t.git'
+" Plug 'godlygeek/tabular'
+" Plug 'mhinz/vim-signify'
+" Plug 'jdkanani/vim-material-theme'
+" Plug 'trevordmiller/nova-vim'
+" Plug 'joshdick/onedark.vim'
+" Plug 'tpope/vim-fugitive'
+" Plug 'janko-m/vim-test'
 
-Bundle 'scrooloose/nerdcommenter'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'tpope/vim-surround'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'SearchComplete'
-Plugin 'godlygeek/tabular'
-Plugin 'Shougo/neocomplcache'
-Plugin 'leshill/vim-json'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'mhinz/vim-signify'
-Plugin 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'chriskempson/base16-vim'
-Plugin 'jdkanani/vim-material-theme'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'trevordmiller/nova-vim'
-Plugin 'drewtempelmeyer/palenight.vim'
-Plugin 'joshdick/onedark.vim'
-Plugin 'brooth/far.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'prettier/vim-prettier'
-Plugin 'janko-m/vim-test'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'Raimondi/delimitMate'
+Plug 'bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf'
+Plug 'kien/ctrlp.vim'
+Plug 'prettier/vim-prettier'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'brooth/far.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 " Set syntax highlighting on
 syntax on
