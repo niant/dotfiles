@@ -1,5 +1,5 @@
 # Configure MacOS
-source macos.sh
+source ~/.dotfiles/macos.sh
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
