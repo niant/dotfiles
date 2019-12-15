@@ -1,10 +1,5 @@
-# Install xcode CLI tools
-xcode-select --install
-
-# Use old SSH-keys or generate new ones (add your details)
-ssh-keygen -t rsa -b 4096 -C "Computer X (mail@example.com)"
-
-echo 'Remember to add your public SSH key to Github'
+# Configure MacOS
+source macos.sh
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -17,9 +12,6 @@ brew cask install iterm2 google-chrome homebrew/cask-versions/google-chrome-cana
 # Install Powerline font if required, but powerlevel10k should download
 # better one once started
 # homebrew/cask-fonts/font-meslo-for-powerline
-
-# clone dotfiles (GitHub) (requires SSH keys)
-git clone —recursive git@github.com:niant/dotfiles.git ~/.dotfiles
 
 # Start using dotfiles .zshrc (requires dotfiles)
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
@@ -36,11 +28,9 @@ ln -s ~/.dotfiles/.vimrc ~/.vimrc
 # Add directories for Vim
 cd ~/.vim/ && mkdir backup swap undo
 
-# Configure MacOS
-source macos.sh
-
 # Configure Sublime Text (insert your path)
-git clone git@github.com:niant/sublime-settings.git ~/Library/Application Support/Sublime Text 3/Packages/User
+git clone https://github.com/niant/sublime-settings.git ~/Library/Application Support/Sublime Text 3/Packages/User
+(cd ~/Library/Application Support/Sublime Text 3/Packages/User && git remote set-url origin git@github.com:niant/sublime-settings.git)
 
 echo 'Remember to configure'
 
@@ -53,6 +43,8 @@ echo 'Energy settings:'
 echo '- Display sleep times'
 
 echo 'Disable Screensaver'
+
+echo 'Remember to add your public SSH key to Github'
 
 # Install nvm node to be recognized by OS
 # Add path to node bin directory in /etc/paths.d (create file eg. node-path)
