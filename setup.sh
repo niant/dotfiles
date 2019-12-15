@@ -29,8 +29,8 @@ ln -s ~/.dotfiles/.vimrc ~/.vimrc
 cd ~/.vim/ && mkdir backup swap undo
 
 # Configure Sublime Text (insert your path)
-git clone https://github.com/niant/sublime-settings.git ~/Library/Application\ Support/Sublime Text\ 3/Packages/User
-(cd ~/Library/Application Support/Sublime\ Text\ 3/Packages/User && git remote set-url origin git@github.com:niant/sublime-settings.git)
+git clone https://github.com/niant/sublime-settings.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+(cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User && git remote set-url origin git@github.com:niant/sublime-settings.git)
 
 echo 'Remember to configure'
 
