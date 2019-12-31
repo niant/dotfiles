@@ -14,11 +14,11 @@ source ~/.dotfiles/powerlevel10k/powerlevel10k.zsh-theme
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Basic auto/tab complete:
-#autoload -U compinit
-#zstyle ':completion:*' menu select
-#zmodload zsh/complist
-#compinit
-#_comp_options+=(globdots)    # Include hidden files.
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)    # Include hidden files.
 
 # Enable vim mode
 bindkey -v
@@ -30,6 +30,8 @@ KEYTIMEOUT=1
 export CLICOLOR=1
 
 export EDITOR='vim'
+
+export LC_ALL=en_US.UTF-8
 
 [ -f ~/.dotfiles/.aliases ] && source ~/.dotfiles/.aliases
 
