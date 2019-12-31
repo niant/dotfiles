@@ -5,7 +5,7 @@ source ~/.dotfiles/macos.sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install software
-brew install git z git-extras tmux zsh vim nvm zsh-syntax-highlighting
+brew install git z git-extras tmux zsh vim nvm zsh-syntax-highlighting zsh-completions
 brew tap caskroom/cask
 brew cask install iterm2 google-chrome homebrew/cask-versions/google-chrome-canary sublime-text spotify
 
