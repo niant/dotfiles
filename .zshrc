@@ -21,7 +21,7 @@ compinit
 _comp_options+=(globdots)    # Include hidden files.
 
 # Enable vim mode
-bindkey -v
+# bindkey -v
 
 # 10ms for key sequences
 KEYTIMEOUT=1
