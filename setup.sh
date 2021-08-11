@@ -7,7 +7,7 @@ source ~/.dotfiles/macos.sh
 # Install software
 brew install git z git-extras tmux zsh vim nvm zsh-syntax-highlighting zsh-completions
 brew tap caskroom/cask
-brew cask install iterm2 google-chrome homebrew/cask-versions/google-chrome-canary sublime-text spotify
+brew cask install iterm2 google-chrome homebrew/cask-versions/google-chrome-canary spotify vscodium
 
 # Install Powerline font if required, but powerlevel10k should download
 # better one once started
@@ -27,10 +27,6 @@ ln -s ~/.dotfiles/.vimrc ~/.vimrc
 
 # Add directories for Vim
 cd ~/.vim/ && mkdir backup swap undo
-
-# Configure Sublime Text (insert your path)
-git clone https://github.com/niant/sublime-settings.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-(cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User && git remote set-url origin git@github.com:niant/sublime-settings.git)
 
 echo 'Remember to configure'
 
