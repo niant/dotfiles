@@ -41,3 +41,5 @@ export NVM_DIR="$HOME/.nvm"
 source /usr/local/etc/profile.d/z.sh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ ! -s ~/.travis/travis.sh ] || source ~/.travis/travis.sh
