@@ -6,8 +6,9 @@ source ~/.dotfiles/macos.sh
 
 # Install software
 brew install git z git-extras tmux zsh vim nvm zsh-syntax-highlighting zsh-completions
-brew tap caskroom/cask
-brew cask install iterm2 google-chrome homebrew/cask-versions/google-chrome-canary spotify vscodium
+brew tap homebrew/cask
+brew install iterm2 google-chrome homebrew/cask-versions/google-chrome-canary spotify visual-studio-code
+brew install romkatv/powerlevel10k/powerlevel10k
 
 # Install Powerline font if required, but powerlevel10k should download
 # better one once started
