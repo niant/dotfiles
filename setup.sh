@@ -5,10 +5,10 @@ source ~/.dotfiles/macos.sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install software
-brew install git z git-extras tmux zsh vim nvm zsh-syntax-highlighting zsh-completions
-brew tap homebrew/cask
-brew install iterm2 google-chrome homebrew/cask-versions/google-chrome-canary spotify visual-studio-code
-brew install romkatv/powerlevel10k/powerlevel10k
+/opt/homebrew/bin/brew install git z git-extras tmux zsh vim nvm zsh-syntax-highlighting zsh-completions
+/opt/homebrew/bin/brew tap homebrew/cask
+/opt/homebrew/bin/brew install iterm2 google-chrome homebrew/cask-versions/google-chrome-canary spotify visual-studio-code
+/opt/homebrew/bin/brew install romkatv/powerlevel10k/powerlevel10k
 
 # Install Powerline font if required, but powerlevel10k should download
 # better one once started
