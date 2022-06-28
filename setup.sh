@@ -2,7 +2,10 @@
 source ~/.dotfiles/macos.sh
 
 # Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install software
 /opt/homebrew/bin/brew install git z git-extras tmux zsh vim nvm zsh-syntax-highlighting zsh-completions
