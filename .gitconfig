@@ -13,8 +13,12 @@
     br = branch
     m = merge
     st = status
+    del = branch -D
+    undo = reset HEAD~1
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
     ui = auto
 [push]
-    default = matching
+    default = simple
+[pull]
+    rebase = true
