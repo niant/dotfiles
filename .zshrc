@@ -8,21 +8,21 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Use zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
+# Enable completion (zsh-completions)
+# Might need to run "compaudit | xargs chmod g-w" in addition? If you get
+# insecure directories warning
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
-# Basic auto/tab complete:
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)    # Include hidden files.
+  autoload -Uz compinit
+  compinit
+fi
 
 # Enable vim mode
 # bindkey -e
 
 # 10ms for key sequences
-KEYTIMEOUT=1
+#KEYTIMEOUT=1
 
 # Enable colors for ls for example
 export CLICOLOR=1
