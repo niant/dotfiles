@@ -5,19 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Enable completion (zsh-completions)
-# Might need to run "compaudit | xargs chmod g-w" in addition? If you get
-# insecure directories warning
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
 # Enable vim mode
 # bindkey -e
 
@@ -33,11 +20,8 @@ export LC_ALL=en_US.UTF-8
 
 [ -f ~/.dotfiles/.aliases ] && source ~/.dotfiles/.aliases
 
-source /opt/homebrew/etc/profile.d/z.sh
-
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-[ ! -s ~/.travis/travis.sh ] || source ~/.travis/travis.sh
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
