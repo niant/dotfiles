@@ -32,19 +32,20 @@ ln -s ~/.dotfiles/.vimrc ~/.vimrc
 # Add directories for Vim
 cd ~/.vim/ && mkdir backup swap undo
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo 'Remember to configure'
 
 echo 'Keyboard:'
 echo '- Shortcut: move focus into next window cmd+<'
-echo '- Touchbar: Expanded Control Strip'
 echo '- Modifier Keys: Caps lock -> ESC'
 
 echo 'Energy settings:'
 echo '- Display sleep times'
 
+echo 'Nix home-manager'
+
 echo 'Disable Screensaver'
 
 echo 'Remember to add your public SSH key to Github'
 
-# Install nvm node to be recognized by OS
-# Add path to node bin directory in /etc/paths.d (create file eg. node-path)
