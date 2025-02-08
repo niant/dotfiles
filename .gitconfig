@@ -7,6 +7,7 @@
     # git change-commits GIT_COMMITTER_NAME "old name" "new name"
     change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ $`echo $VAR` = \\\"$OLD\\\" ]]; then export $VAR=\\\"$NEW\\\"; fi\" $@; }; f"
     # from https://help.github.com/articles/remove-sensitive-data
+    gone = "git branch -v | awk '$3 == \"[gone]\" { print $1 }'"
 
     co = checkout
     ci = commit
@@ -15,6 +16,9 @@
     st = status
     del = branch -D
     undo = reset HEAD~1
+	  staash = stash --all
+	  fpush = push --force-with-lease
+	  rebase-onto = "!f() { git rebase --onto master $(git merge-base \"$1\" \"$2\") \"$1\"; }; f"
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
     ui = auto
@@ -22,3 +26,5 @@
     default = simple
 [pull]
     rebase = true
+[rerere]
+    enabled = true
