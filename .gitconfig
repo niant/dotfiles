@@ -7,7 +7,7 @@
     # git change-commits GIT_COMMITTER_NAME "old name" "new name"
     change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ $`echo $VAR` = \\\"$OLD\\\" ]]; then export $VAR=\\\"$NEW\\\"; fi\" $@; }; f"
     # from https://help.github.com/articles/remove-sensitive-data
-    gone = "git branch -v | awk '$3 == \"[gone]\" { print $1 }'"
+    gone = !git branch -v | awk '$3 == \"[gone]\" { print $1 }'
 
     co = checkout
     ci = commit
@@ -16,9 +16,14 @@
     st = status
     del = branch -D
     undo = reset HEAD~1
-	  staash = stash --all
-	  fpush = push --force-with-lease
-	  rebase-onto = "!f() { git rebase --onto master $(git merge-base \"$1\" \"$2\") \"$1\"; }; f"
+    staash = stash --all
+    fpush = push --force-with-lease
+    rebase-onto = "!f() { git rebase --onto master $(git merge-base \"$1\" \"$2\") \"$1\"; }; f"
+    brefs = for-each-ref --format='%(refname:short)' refs/heads
+    noskip = update-index --no-skip-worktree
+    skip = update-index --skip-worktree
+    # ! = alias executed as shell command
+    fpull = !git fetch origin && git reset --hard @{upstream}
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
     ui = auto
@@ -28,3 +33,5 @@
     rebase = true
 [rerere]
     enabled = true
+[rebase]
+	updateRefs = true
