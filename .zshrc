@@ -37,3 +37,9 @@ export PATH="$HOME/.local/bin:$PATH"
 setopt HIST_IGNORE_ALL_DUPS # don't record dupes in history
 setopt HIST_REDUCE_BLANKS   # remove superfluous blanks
 setopt SHARE_HISTORY        # share history between sessions
+
+# Enable zoxide
+eval "$(zoxide init zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
