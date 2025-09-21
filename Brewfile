@@ -1,5 +1,9 @@
 # This file can be regenerated with `brew bundle dump`
-tap "romkatv/powerlevel10k"
+# And installed with `brew bundle install`
+# Optional packages listed here:
+# brew "git-extras"
+# cask "logseq"
+# cask "google-chrome@canary"
 brew "aws-vault"
 brew "awscli"
 brew "bat"
@@ -35,7 +39,6 @@ cask "google-drive"
 cask "iina"
 cask "libreoffice"
 cask "logitune"
-# cask "logseq"
 cask "microsoft-auto-update"
 cask "microsoft-teams"
 cask "rancher"
