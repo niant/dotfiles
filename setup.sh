@@ -19,6 +19,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Start using dotfiles .zshrc (requires dotfiles)
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/.zshenv ~/.zshenv
+ln -s ~/.dotfiles/.zprofile ~/.zprofile
 
 # Start using .tmux.conf
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
