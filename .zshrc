@@ -34,9 +34,14 @@ emulate zsh -c "$(direnv hook zsh)"
 
 export PATH="$HOME/.local/bin:$PATH"
 
+# Command history settings
 setopt HIST_IGNORE_ALL_DUPS # don't record dupes in history
 setopt HIST_REDUCE_BLANKS   # remove superfluous blanks
 setopt SHARE_HISTORY        # share history between sessions
+setopt INC_APPEND_HISTORY   # add commands to history immediately
+setopt EXTENDED_HISTORY     # save timestamp of command in history file
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
 # Enable zoxide
 eval "$(zoxide init zsh)"
