@@ -27,7 +27,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'Raimondi/delimitMate'
 Plug 'bling/vim-airline'
-Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'  (Done by Catppuccin tmux theme now 11.10.2025)
 Plug 'airblade/vim-gitgutter'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf'
@@ -129,7 +129,7 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
 " ctrlp: ignore bower and node files
-let g:ctrlp_custom_ignore = '\v[\/](bower_components|node_modules)$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules)$'
 
 " Wrapped lines goes down/up to next row, rather than next line in file.
 noremap j gj
