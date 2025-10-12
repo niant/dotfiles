@@ -19,6 +19,8 @@ ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 
 # Start using .gitconfig
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/.config/git ~/.config/git
+cp ~/.dotfiles/.config/git/example.gitconfig_local ~/.config/git/.gitconfig_local
 
 # Start using .vimrc
 ln -s ~/.dotfiles/.vimrc ~/.vimrc

@@ -1,0 +1,2 @@
+[includeIf "hasconfig:remote.*.url:git@github.com:niant/**"]
+    path = ~/.config/git/.gitconfig_local_personal
