@@ -1,3 +1,6 @@
+[core]
+    # https://github.com/dandavison/delta
+    pager = delta
 [alias]
     logtree = log --pretty=format:'%h %s [%an]' --graph
 
@@ -24,13 +27,32 @@
 [color]
     # Use colors in Git commands that are capable of colored output when outputting to the terminal
     ui = auto
+[interactive]
+    # https://github.com/dandavison/delta
+    diffFilter = delta --color-only
 [push]
     default = simple
+    autoSetupRemote = true
 [pull]
     rebase = true
 [rerere]
     enabled = true
 [rebase]
 	updateRefs = true
+    # https://andrewlock.net/smoother-rebases-with-auto-squashing-git-commits/
+    # git commit --fixup <commit>
+    # git commit --fixup :/<commit message>
+    autosquash = true
+[fetch]
+    prune = true
+    pruneTags = true
+[diff]
+    # https://luppeng.wordpress.com/2020/10/10/when-to-use-each-of-the-git-diff-algorithms/
+    algorithm = histogram
+    external = difft
+    colorMoved = default
+    colorMovedWS = ignore-all-space
+[log]
+    date = iso
 [include]
     path = ~/.config/git/.gitconfig_local
