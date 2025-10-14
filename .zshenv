@@ -2,7 +2,7 @@
 # as well, like login and non-login environments)
 
 # Activate mise globally
-eval "$(mise activate zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
 
 # Enable rancher in the path
 export PATH="$HOME/.rd/bin:$PATH"
