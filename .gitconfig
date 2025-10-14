@@ -49,7 +49,8 @@
 [diff]
     # https://luppeng.wordpress.com/2020/10/10/when-to-use-each-of-the-git-diff-algorithms/
     algorithm = histogram
-    external = difft
+    # Disabled difft to get patch files from diffs correctly
+    # external = difft
     colorMoved = default
     colorMovedWS = ignore-all-space
 [log]
