@@ -48,3 +48,7 @@ eval "$(zoxide init zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# To enable git-quick-stats dependent coreutils to work with PATH
+# https://github.com/git-quick-stats/git-quick-stats
+export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
