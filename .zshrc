@@ -40,8 +40,10 @@ setopt HIST_REDUCE_BLANKS   # remove superfluous blanks
 setopt SHARE_HISTORY        # share history between sessions
 setopt INC_APPEND_HISTORY   # add commands to history immediately
 setopt EXTENDED_HISTORY     # save timestamp of command in history file
+setopt extendedglob
 export HISTSIZE=1000000
 export SAVEHIST=1000000
+export HISTORY_IGNORE="(ls|cd|cd ..|pwd|exit|clear)"
 
 # Enable zoxide
 eval "$(zoxide init zsh)"
