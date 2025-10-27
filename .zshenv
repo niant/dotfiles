@@ -4,7 +4,8 @@
 # Activate mise globally
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 
-# Enable rancher in the path
-export PATH="$HOME/.rd/bin:$PATH"
+# Enable rancher in the path (disabled here as Rancher Desktop adds it to .zshrc
+# always when restarting Racher Desktop)
+# export PATH="$HOME/.rd/bin:$PATH"
 
 # echo ".zshenv loaded"
