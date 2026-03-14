@@ -168,6 +168,10 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 # Turn on app auto-update
 defaults write com.apple.commerce AutoUpdate -bool true
 
+# Enable cmd + ctrl + click on any part of a window to move it.
+# Disable with: defaults delete -g NSWindowShouldDragOnGesture
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
 # Select theme
 # defaults write com.apple.terminal "Default Window Settings" -string "Pro"
 # defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
