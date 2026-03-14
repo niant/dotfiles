@@ -50,3 +50,6 @@ cask "todoist-app"
 cask "visual-studio-code"
 cask "whatsapp"
 cask "windows-app"
+# https://github.com/finestructure/Hummingbird
+# brew tap finestructure/Hummingbird
+# brew install finestructure/hummingbird/hummingbird
