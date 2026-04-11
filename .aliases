@@ -19,3 +19,6 @@ alias gbowners="git for-each-ref --format='%(committerdate)%09%(authorname)%09%(
 alias ggone="git branch -vv | awk '/: gone]/{print \$1}'"
 alias gstash="git stash save -u"
 alias gdeletegone="git branch -vv | awk '/: gone]/{print \$1}' | xargs -p git branch -D"
+
+# Docker
+alias docker=podman
