@@ -9,6 +9,7 @@ FPATH=$(/opt/homebrew/bin/brew --prefix)/share/zsh-completions:$FPATH
 # Make brew paths available in Nix scripts as well, so include them in this file
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export AWS_SESSION_TOKEN_TTL="32h"
+export AWS_VAULT_KEYCHAIN_NAME=login
 
 # https://docs.brew.sh/Shell-Completion
 # Autoload auto-complete support
@@ -20,5 +21,3 @@ zstyle ':completion:*' menu select
 # compinit -C # Uses cached zcompdump file and skips security checks (if it exists)
 # compinit -i # Ignores insecure files and directories silently
 compinit -i
-
-# echo ".zprofile loaded"
