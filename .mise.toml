@@ -1,0 +1,3 @@
+[env]
+#_.file = [".env", ".env.local"]
+PODMAN_COMPOSE_PROVIDER='podman-compose'

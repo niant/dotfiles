@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# gpushpat - Git Push Pattern
+#
+# Pushes multiple branches matching a pattern with force-with-lease
+# Usage: gpushpat <pattern>
+# Example: gpushpat feature/123
+
+set -e  # Exit immediately if a command exits with non-zero status
+
+if [ $# -ne 1 ]; then
+    echo "Git Push Pattern. Usage: $(basename "$0") <branch-pattern> (e.g. gpushpat feature/123)"
+    exit 1
+fi
+
+# Escape special characters in the pattern for use in awk
+escaped_pattern=$(printf '%s\n' "$1" | sed 's/[.[\*^$(){}?+|/]/\\&/g')
+
+# master is ignored to not force push it accidentally
+# Store command in a variable for later execution (with --dry-run option first)
+cmd='git brefs | awk "!/master/ && /$escaped_pattern/" | xargs --no-run-if-empty git push origin --force-with-lease'
+
+# git brefs = git for-each-ref --format='%(refname:short)' refs/heads
+
+# Capture dry run output to check for "Everything up-to-date"
+dry_run_output=$(eval "$cmd" --dry-run 2>&1)
+echo "$dry_run_output"
+
+# Exit early if everything is already up-to-date
+if echo "$dry_run_output" | grep -q "Everything up-to-date"; then
+    exit 0
+fi
+
+echo -n "Proceed with the operation? (Y/n) "
+# Use -n 1 to read just one character without waiting for Enter
+read -n 1 response
+echo  # Add a newline after the response for better formatting
+response=${response:-Y}  # Default to "Y" if empty
+
+if [[ "$response" =~ ^[Yy]$ ]]; then
+    echo "Continuing..."
+    #git brefs | grep -E "$1" | xargs --no-run-if-empty git push --force-with-lease
+    eval "$cmd"
+else
+    echo "Aborted."
+    exit 1
+fi

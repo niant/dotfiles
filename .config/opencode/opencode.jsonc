@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "formatter": true,
+  //"lsp": true,
+  "permission": {
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "bash": {
+      "rm -rf": "deny",
+      "rm -rf *": "deny",
+      "git reset --hard *": "deny",
+      "git clean *": "deny",
+      "sudo *": "deny"
+    },
+    "external_directory": "deny"
+  },
+  "watcher": {
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      ".next/**",
+      "coverage/**"
+    ]
+  },
+  "experimental": {
+    //"continue_loop_on_deny": true
+  },
+  "provider": {
+    "lmstudio": {
+      "options": {
+        "baseURL": "http://127.0.0.1:1234/v1"
+      }
+    }
+  }
+/*  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:1234/v1"
+      },
+      "models": {
+        "qwen/qwen3.8-27b": {
+          "name": "qwen/qwen3.8-27b",
+          "limit": {
+            "context": 32768,
+            "output": 8192
+          }
+        }
+      }
+    }
+  }*/
+}
